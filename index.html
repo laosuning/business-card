@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>电子名片</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card" id="cardView">
+        <div class="card-header">
+            <div class="personal-info">
+                <h1 id="nameDisplay">姓名</h1>
+                <p class="title" id="titleDisplay">职位</p>
+            </div>
+            <div class="logo">
+                <img src="images/hotekey-logo.png" alt="HOTEKEY">
+            </div>
+        </div>
+        
+        <div class="company-info">
+            <h2 id="companyDisplay">公司名称</h2>
+            <div class="contact-info">
+                <p><i class="icon icon-location"></i><span id="addressDisplay">公司地址</span></p>
+                <p><i class="icon icon-phone"></i><span id="telDisplay">电话号码</span></p>
+                <p><i class="icon icon-mobile"></i><span id="mobileDisplay">手机号码</span></p>
+                <p><i class="icon icon-email"></i><span id="emailDisplay">电子邮箱</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit-panel" id="editPanel">
+        <h3>编辑名片信息</h3>
+        <div class="form-group">
+            <label>姓名：</label>
+            <input type="text" id="nameInput" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <label>职位：</label>
+            <input type="text" id="titleInput" placeholder="请输入职位">
+        </div>
+        <div class="form-group">
+            <label>公司：</label>
+            <input type="text" id="companyInput" placeholder="请输入公司名称">
+        </div>
+        <div class="form-group">
+            <label>地址：</label>
+            <input type="text" id="addressInput" placeholder="请输入公司地址">
+        </div>
+        <div class="form-group">
+            <label>电话：</label>
+            <input type="tel" id="telInput" placeholder="请输入电话号码">
+        </div>
+        <div class="form-group">
+            <label>手机：</label>
+            <input type="tel" id="mobileInput" placeholder="请输入手机号码">
+        </div>
+        <div class="form-group">
+            <label>邮箱：</label>
+            <input type="email" id="emailInput" placeholder="请输入电子邮箱">
+        </div>
+        <button id="saveBtn">保存</button>
+        <button id="shareBtn">生成分享链接</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
