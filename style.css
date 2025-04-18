@@ -1,5 +1,5 @@
 .business-card {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -9,33 +9,43 @@
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
-    background: white;
-    border-radius: 50%;
+    text-align: right;
     margin-bottom: 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.personal-info {
+    margin-bottom: 30px;
+}
+
+.personal-info h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.personal-info .title {
+    font-size: 16px;
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.personal-info h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #1e3c72;
 }
 
-.name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.title {
-    font-size: 16px;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
-
-.company {
-    font-size: 18px;
-    margin-bottom: 20px;
+.contact-info .icon {
+    margin-right: 10px;
+    font-style: normal;
 }
 
 .contact-info {
