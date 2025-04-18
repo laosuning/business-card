@@ -18,9 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 分享按钮事件
     document.getElementById('shareBtn').addEventListener('click', function() {
+        const data = {
+            name: document.getElementById('nameInput').value,
+            title: document.getElementById('titleInput').value,
+            company: document.getElementById('companyInput').value,
+            address: document.getElementById('addressInput').value,
+            tel: document.getElementById('telInput').value,
+            mobile: document.getElementById('mobileInput').value,
+            email: document.getElementById('emailInput').value
+        };
         const baseUrl = 'https://laosuning.github.io/business-card/';
-        const shareUrl = baseUrl + '?view=share';
-        // 复制链接到剪贴板
+        const shareUrl = baseUrl + '?view=share&data=' + encodeURIComponent(JSON.stringify(data));
         navigator.clipboard.writeText(shareUrl).then(function() {
             alert('分享链接已复制到剪贴板！');
         });
@@ -60,5 +68,20 @@ function loadCardData() {
         document.getElementById('telDisplay').textContent = data.tel;
         document.getElementById('mobileDisplay').textContent = data.mobile;
         document.getElementById('emailDisplay').textContent = data.email;
+    }
+    // 如果是查看模式，从 URL 加载数据
+    if (viewMode === 'share') {
+        document.getElementById('editPanel').style.display = 'none';
+        const urlData = urlParams.get('data');
+        if (urlData) {
+            const data = JSON.parse(decodeURIComponent(urlData));
+            document.getElementById('nameDisplay').textContent = data.name;
+            document.getElementById('titleDisplay').textContent = data.title;
+            document.getElementById('companyDisplay').textContent = data.company;
+            document.getElementById('addressDisplay').textContent = data.address;
+            document.getElementById('telDisplay').textContent = data.tel;
+            document.getElementById('mobileDisplay').textContent = data.mobile;
+            document.getElementById('emailDisplay').textContent = data.email;
+        }
     }
 }

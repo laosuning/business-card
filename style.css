@@ -1,5 +1,47 @@
-/* 原有的卡片样式保持不变 */
-/* ... 之前的样式代码 ... */
+.business-card {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #1e3c72;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.company {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 14px;
+    line-height: 1.6;
+}
 
 /* 编辑面板样式 */
 .edit-panel {
